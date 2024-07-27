@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Gourmet Bistro - Alta Gastronomia</title>
+  <meta name="title" content="Gourmet Bistro - Alta Gastronomia">
+  <meta name="description" content="Este é um template de site de restaurante feito com amor.">
+
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="shortcut icon" type="image/png" href="logo.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet"  href="script.js">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Carter+One&family=Nunito+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="images/hero-banner.png">
+
+</head>
+
+<body id="top">
+  <header class="header" data-header>
+    <div class="container">
+
+      <a href="#" class="logo">Gourmet Bistro</a>
+
+      <button class="nav-toggle-btn" aria-label="toggle menu" data-nav-toggler>
+        <ion-icon name="menu-outline" aria-hidden="true" class="menu-icon"></ion-icon>
+        <ion-icon name="close-outline" aria-label="true" class="close-icon"></ion-icon>
+      </button>
+
+      <nav class="navbar" data-navbar>
+        <ul class="navbar-list">
+          <li class="navbar-item"><a href="#home" class="navbar-link" data-nav-link>Início</a></li>
+          <li class="navbar-item"><a href="#menu" class="navbar-link" data-nav-link>Menu</a></li>
+          <li class="navbar-item"><a href="#about" class="navbar-link" data-nav-link>Sobre</a></li>
+          <li class="navbar-item"><a href="#blog" class="navbar-link" data-nav-link>Blog</a></li>
+          <li class="navbar-item"><a href="#contact" class="navbar-link" data-nav-link>Contato</a></li>
+        </ul>
+        <a href="#" class="navbar-action-btn">Reservar</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="action-btn" aria-label="Buscar">
+          <ion-icon name="search-outline" aria-hidden="true"></ion-icon>
+        </button>
+        <button class="action-btn user" aria-label="Usuário">
+          <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
+        </button>
+        <button class="action-btn" aria-label="Carrinho">
+          <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
+          <span class="btn-badge">0</span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+  <main>
+
+  <section class="hero" id="home">
+    <div class="container">
+      <h1 class="hero-title">Bem-vindo ao Gourmet Bistro</h1>
+      <p class="hero-text">Desfrute da alta gastronomia em um ambiente acolhedor e sofisticado.</p>
+      <a href="#menu" class="btn-primary">Veja o Menu</a>
+    </div>
+  </section>
+
+  <section class="services" id="menu">
+  <div class="container">
+    <h2 class="section-title">Nosso Menu</h2>
+    <div class="menu-gallery">
+      <div class="menu-item">
+        <img src="images/prato1.png" alt="Prato Principal" class="menu-img">
+        <div class="menu-info">
+          <h3 class="menu-title">Prato Principal 1</h3>
+          <p class="menu-description">Delicioso prato principal preparado com os melhores ingredientes.</p>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img src="images/prato2.png" alt="Sobremesa" class="menu-img">
+        <div class="menu-info">
+          <h3 class="menu-title">Sobremesa 1</h3>
+          <p class="menu-description">Irresistível sobremesa que derrete na boca.</p>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img src="images/prato3.png" alt="Bebida" class="menu-img">
+        <div class="menu-info">
+          <h3 class="menu-title">Bebida 1</h3>
+          <p class="menu-description">Refrescante bebida para acompanhar suas refeições.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="team-section">
+      <div class="container">
+        <h2>Nossa Equipe</h2>
+        <div class="team-grid">
+          <!-- Exemplo de membro da equipe -->
+          <div class="team-member">
+            <img src="images/chef1.png" alt="Chef João Silva">
+            <h3>Chef João Silva</h3>
+            <p class="role">Chef Executivo</p>
+            <p class="description">
+              Com mais de 20 anos de experiência, o Chef João Silva é conhecido por sua habilidade em criar pratos inovadores e saborosos. Sua paixão pela culinária é evidente em cada prato que serve.
+            </p>
+          </div>
+          <div class="team-member">
+            <img src="images/chef2.png" alt="Chef Maria Oliveira">
+            <h3>Chef Maria Oliveira</h3>
+            <p class="role">Sous Chef</p>
+            <p class="description">
+              Chef Maria Oliveira traz um toque de criatividade e técnica ao nosso menu. Ela é responsável por supervisionar a preparação dos pratos e garantir a qualidade e apresentação excepcionais.
+            </p>
+          </div>
+          <!-- Adicione mais membros da equipe conforme necessário -->
+        </div>
+      </div>
+    </section>
+<section class="reservation-section">
+      <div class="reservation-form-container">
+        <div class="reservation-form">
+          <h2>Reservar Mesa</h2>
+          <form action="#" method="post">
+            <label for="name">Nome</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Telefone</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="date">Data</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="time">Hora</label>
+            <input type="time" id="time" name="time" required>
+
+            <label for="people">Número de Pessoas</label>
+            <input type="number" id="people" name="people" min="1" required>
+
+            <button type="submit">Reservar</button>
+          </form>
+        </div>
+      </div>
+    </section>
+</main>
+
+
+
+<!-- #FOOTER -->
+<footer class="footer" style="background-image: url('images/footer-bg.png');">
+  <div class="footer-top section">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <a href="#" class="logo">Gourmet Bistro</a>
+          <p class="footer-text">
+            Se você tiver alguma pergunta: <a href="mailto:support@bistro.com" class="link">support@bistro.com</a>
+          </p>
+          <ul class="contact-list">
+            <li class="contact-item">
+              <ion-icon name="location-outline" aria-hidden="true"></ion-icon>
+              <address class="address">Rua das Flores, 123, São Paulo - SP</address>
+            </li>
+            <li class="contact-item">
+              <ion-icon name="call-outline" aria-hidden="true"></ion-icon>
+              <a href="tel:+551112345678" class="contact-link">(+55) 11 1234-5678</a>
+            </li>
+          </ul>
+        </div>
+        <div class="social-section">
+          <div class="social-title">Siga-nos</div>
+          <ul class="social-list">
+            <li><a href="https://facebook.com" class="social-link" target="_blank"><ion-icon name="logo-facebook"></ion-icon></a></li>
+            <li><a href="https://twitter.com" class="social-link" target="_blank"><ion-icon name="logo-twitter"></ion-icon></a></li>
+            <li><a href="https://instagram.com" class="social-link" target="_blank"><ion-icon name="logo-instagram"></ion-icon></a></li>
+            <!-- Adicione mais ícones se necessário -->
+          </ul>
+        </div>
+      </div>
+      <div class="footer-lists">
+        <ul class="footer-list">
+          <li><p class="footer-list-title">Empresa</p></li>
+          <li><a href="#" class="footer-link">Carreiras</a></li>
+          <li><a href="#" class="footer-link">Sobre Nós</a></li>
+          <li><a href="#" class="footer-link">Contato</a></li>
+        </ul>
+        <ul class="footer-list">
+          <li><p class="footer-list-title">Menu</p></li>
+          <li><a href="#" class="footer-link">Pratos Principais</a></li>
+          <li><a href="#" class="footer-link">Sobremesas</a></li>
+          <li><a href="#" class="footer-link">Bebidas</a></li>
+        </ul>
+        <ul class="footer-list">
+          <li><p class="footer-list-title">Serviços</p></li>
+          <li><a href="#" class="footer-link">Eventos</a></li>
+          <li><a href="#" class="footer-link">Catering</a></li>
+          <li><a href="#" class="footer-link">Reservas</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <p class="copyright">
+        &copy; 2024 Feito com ♥ por <a href="#" class="copyright-link">Gourmet Bistro</a>
+      </p>
+    </div>
+  </div>
+</footer>
+
+
+
+  <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
+

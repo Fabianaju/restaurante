@@ -1,0 +1,737 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+body {
+    font-size: 16px;
+    line-height: 1.6;
+    background-color: #f8f9fa;
+    color: #333;
+    overflow-x: hidden; /* Evita rolagem horizontal */
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1200px; /* Limita a largura máxima do container */
+    margin: 0 auto; /* Centraliza o container */
+    padding: 0 1rem; /* Adiciona padding horizontal */
+}
+
+/* Header */
+.header {
+    background-color: #343a40;
+    padding: 1rem 0;
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-toggle-btn {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+    display: none;
+}
+
+.logo {
+    font-family: 'Bangers', cursive;
+    font-size: 2rem;
+    color: #ffc107;
+    text-decoration: none;
+    margin-right: auto; /* Move logo para a esquerda */
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-list {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.navbar-link {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+}
+
+.navbar-link::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #ffc107;
+    transition: width 0.3s;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+}
+
+.navbar-link:hover::after {
+    width: 100%;
+}
+
+.navbar-action-btn {
+    background-color: #ffc107;
+    color: #343a40;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 2rem; /* Aumenta o espaço entre 'Contato' e 'Reservar' */
+    transition: transform 0.3s ease-in-out; /* Adiciona transição para o botão */
+}
+
+.navbar-action-btn:hover {
+    transform: scale(1.05); /* Adiciona efeito de movimento ao passar o mouse */
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-left: auto; /* Move ações do cabeçalho para a direita */
+}
+
+.action-btn {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.btn-badge {
+    background-color: #dc3545;
+    color: #fff;
+    padding: 0.2rem 0.5rem;
+    border-radius: 50%;
+    font-size: 0.8rem;
+    position: relative;
+    top: -10px;
+    right: -10px;
+}
+
+/* Hero Section */
+.hero {
+    background: url('images/hero-banner.png') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+    padding: 0 1rem;
+    margin-top: 60px; /* Compensa o cabeçalho fixo */
+}
+
+.hero-title {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-family: 'Carter One', cursive;
+}
+
+.hero-text {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.btn-primary {
+    background-color: #ffc107;
+    color: #343a40;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.3s ease-in-out; /* Adiciona transição para o botão */
+}
+
+.btn-primary:hover {
+    transform: scale(1.05); /* Adiciona efeito de movimento ao passar o mouse */
+}
+
+/* Nosso Menu Section */
+.services {
+    background-color: #fff;
+    padding: 4rem 0;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #343a40;
+}
+
+.menu-gallery {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.menu-item {
+    position: relative;
+    width: 30%;
+    margin-bottom: 2rem;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.menu-item:hover {
+    transform: scale(1.05);
+}
+
+.menu-img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.menu-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.menu-item:hover .menu-info {
+    opacity: 1;
+}
+
+.menu-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.menu-description {
+    font-size: 1rem;
+}
+/* Estilo global para a seção da equipe */
+.team-section {
+  padding: 2rem;
+  background-color: #f9f9f9;
+}
+
+.team-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+.team-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.team-member {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 300px;
+}
+
+.team-member img {
+  width: 100%;
+  height: auto;
+}
+
+.team-member h3 {
+  font-size: 1.25rem;
+  color: #333;
+  margin: 1rem 0 0.5rem;
+}
+
+.role {
+  font-size: 1rem;
+  color: #666;
+}
+
+.description {
+  padding: 0 1rem 1rem;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  .team-member {
+    max-width: 100%;
+  }
+
+  .team-member h3 {
+    font-size: 1rem;
+  }
+
+  .role {
+    font-size: 0.9rem;
+  }
+
+  .description {
+    font-size: 0.8rem;
+  }
+}
+
+
+main {
+  flex: 1;
+}
+.reservation-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  position: relative;
+  background: url('images/reservation-bg.png') no-repeat center center;
+  background-size: cover;
+  min-height: 50vh;
+}
+
+.reservation-form-container {
+  width: 100%;
+  max-width: 800px;
+  position: relative;
+}
+
+.reservation-form {
+  background: rgba(255, 255, 255, 0.8); /* Fundo branco translúcido */
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 1s ease-in-out;
+  backdrop-filter: blur(10px); /* Adiciona um desfoque ao fundo */
+}
+
+.reservation-form h2 {
+  margin: 0 0 1rem;
+  font-size: 1.5rem;
+  color: #333;
+  text-align: center;
+}
+
+.reservation-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.reservation-form label {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #555;
+}
+
+.reservation-form input {
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background: #fff;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.reservation-form input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.reservation-form button {
+  padding: 0.75rem;
+  border: none;
+  border-radius: 4px;
+  background: #007bff;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.reservation-form button:hover {
+  background-color: #0056b3;
+}
+
+/* Animação de Fade In */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  .reservation-form {
+    padding: 1rem;
+  }
+
+  .reservation-form h2 {
+    font-size: 1.25rem;
+  }
+
+  .reservation-form input,
+  .reservation-form button {
+    font-size: 0.9rem;
+  }
+}
+
+/* Footer */
+.footer {
+  color: #fff;
+  padding-top: 2rem;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Alinhar ícones sociais à direita */
+.footer-top {
+  padding-bottom: 1rem;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* Adiciona o título "Siga-nos" */
+.social-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.social-title {
+  font-size: 1.25rem;
+  color: #ffc107;
+  margin-bottom: 1rem;
+  text-align: right; /* Alinha o título à direita */
+}
+
+/* Alinha a lista de redes sociais à direita e aumenta o tamanho */
+.social-list {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+}
+
+/* Estilo dos links de redes sociais */
+.social-link {
+  color: #ffc107;
+  font-size: 2rem; /* Aumenta o tamanho dos links sociais */
+  transition: color 0.3s ease;
+}
+
+.social-link:hover {
+  color: #fff;
+}
+
+.footer-brand .logo {
+  font-family: 'Bangers', cursive;
+  font-size: 2rem;
+  color: #ffc107;
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+}
+
+.footer-text {
+  margin: 0.5rem 0;
+  color: #ccc;
+  font-size: 0.9rem;
+}
+
+.contact-list,
+.social-list,
+.footer-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contact-list .contact-item,
+.footer-list-title,
+.footer-link {
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.contact-item ion-icon,
+.social-list ion-icon {
+  font-size: 2rem; /* Aumenta o tamanho dos ícones sociais */
+  margin-right: 0.5rem;
+  vertical-align: middle;
+  color: #ffc107; /* Define a cor dos ícones sociais */
+}
+
+.address,
+.contact-link {
+  color: #ccc;
+}
+
+.footer-lists {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+
+.footer-list {
+  flex: 1;
+  min-width: 150px;
+}
+
+.footer-list-title {
+  font-size: 1rem;
+  color: #ffc107;
+}
+
+.footer-link {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+  color: #fff;
+}
+
+.footer-bottom {
+  border-top: 1px solid #444;
+  padding: 0.5rem 0;
+  text-align: center;
+}
+
+.copyright {
+  margin-bottom: 0.5rem;
+  color: #ccc;
+  font-size: 0.9rem;
+}
+
+.copyright-link {
+  color: #ffc107;
+  text-decoration: none;
+}
+
+.copyright-link:hover {
+  text-decoration: underline;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .nav-toggle-btn {
+    display: block;
+  }
+
+  .navbar {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background-color: #343a40;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+  }
+
+  .navbar-list {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .navbar-link {
+    padding: 1rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  .navbar-action-btn {
+    width: 100%;
+    text-align: center;
+    margin-top: 1rem;
+  }
+
+  .header[data-nav-toggler] .navbar {
+    display: flex;
+  }
+
+  .header-actions {
+    display: none;
+  }
+
+  .hero {
+    height: 80vh;
+    padding-top: 60px; /* Compensa o cabeçalho fixo */
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-text {
+    font-size: 1.25rem;
+  }
+
+  .service-card {
+    margin-bottom: 2rem;
+  }
+}
+
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .nav-toggle-btn {
+    display: block;
+  }
+
+  .navbar {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background-color: #343a40;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+  }
+
+  .navbar-list {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .navbar-link {
+    padding: 1rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  .navbar-action-btn {
+    width: 100%;
+    text-align: center;
+    margin-top: 1rem;
+  }
+
+  .header[data-nav-toggler] .navbar {
+    display: flex;
+  }
+
+  .header-actions {
+    display: none;
+  }
+
+  .hero {
+    height: 80vh;
+    padding-top: 60px; /* Compensa o cabeçalho fixo */
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-text {
+    font-size: 1.25rem;
+  }
+
+  .service-card {
+    margin-bottom: 2rem;
+  }
+}
+
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .nav-toggle-btn {
+        display: block;
+    }
+
+    .navbar {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        background-color: #343a40;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        z-index: 999;
+    }
+
+    .navbar-list {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navbar-link {
+        padding: 1rem;
+        width: 100%;
+        text-align: center;
+    }
+
+    .navbar-action-btn {
+        width: 100%;
+        text-align: center;
+        margin-top: 1rem;
+    }
+
+    .header[data-nav-toggler] .navbar {
+        display: flex;
+    }
+
+    .header-actions {
+        display: none;
+    }
+
+    .hero {
+        height: 80vh;
+        padding-top: 60px; /* Compensa o cabeçalho fixo */
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-text {
+        font-size: 1.25rem;
+    }
+
+    .service-card {
+        margin-bottom: 2rem;
+    }
+}
